@@ -3,13 +3,17 @@ import './App.css';
 import MessageList from './MessageList';
 import PropTypes from 'prop-types';
 
+
+
+
 class App extends Component {
+
   getChildContext() {
     return { ruoiFly: "BachRuoi" };
   }
 
   render() {
-    return (
+      return (
         <div className="App">
           <MessageList
               messages={[
