@@ -23,3 +23,4 @@ childen Component
 Do not forget: 
 
     npm i prop-types
+file Connect redux then context undefined ?
