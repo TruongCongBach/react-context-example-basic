@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MessageList from './MessageList';
+import PropTypes from 'prop-types';
 
 class App extends Component {
+  getChildContext() {
+    return { ruoiFly: "BachRuoi" };
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div className="App">
+          <MessageList
+              messages={[
+                {
+                  text: "sadasd"
+                },
+                {
+                  text: "222222"
+                },
+                {
+                  text: "333333"
+                }
+              ]}
+          />
+        </div>
     );
   }
 }
+
+App.childContextTypes = {
+  ruoiFly: PropTypes.string
+};
 
 export default App;
